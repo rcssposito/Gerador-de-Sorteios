@@ -1,0 +1,180 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
+/* html*/
+
+body{
+    width:100%;
+    margin:0%;
+    padding: 0%;
+    position: absolute;
+    background-color:rgba(51,51,51,1);
+    font-family:"Inconsolata";
+}
+
+a{
+    text-decoration:none;
+    color:#e74c3c;
+}
+
+a:hover{
+    color:#fff;
+    transition:0.3s;
+}
+
+[draggable]{
+    user-select: none;
+}
+
+li{
+    display: inline-block;
+}
+
+/* Index */
+
+/* Configuração do espaço */
+
+#title {
+    margin:5% auto;
+    position: relative;
+    font-family:'Lora',serif;
+    font-size:25px;
+    text-align:center;
+    color:#e74c3c;
+}
+
+#title p{
+    display: none;
+}
+
+/* Configuração do formulário */
+
+#form {
+    width: 270px;
+    margin: 0px auto;    
+    position:relative;
+}
+
+/* Configuração dos fieldsets */
+
+.number{
+    height:30px;
+    width:250px;
+    padding:10px;
+    margin:10px 0;
+    border:none; /* Remover a borda do input*/
+    border-radius:5px;
+}
+
+/* Configuração do botão de envio e sua alteração com hover */
+
+.send{
+    height:50px;
+    width:270px;
+    margin-top: 15px;
+    font-size:20px;
+    color:#333;
+    border:none;
+    border-radius:5px;
+    background-color:#fff;    
+}
+
+.send:hover{
+    border: 1px solid #fff;
+    color:#fff;
+    transition:0.3s;
+    background-color:#333;
+}
+
+/* Php */
+
+/* div main, espaço onde os resultados serão exibidos */
+
+#results{
+    height:100%;
+    width:100%;
+    margin: 0px;
+    color:#fff;
+    font-size:15px;
+    position: relative;
+}
+
+/* Container de exibição dos resultados*/
+
+.corpo{
+    width: 105px;
+    height: 60px;
+    margin-left:15px;
+    margin-bottom:50px;
+    padding: 3px 7px 3px 7px;
+    float: left;
+    position: relative;
+    color:#fff;
+    cursor: pointer;
+}
+
+/* Cabeçalho da tabela de resultado*/
+
+.player{
+    margin-bottom: 2px;
+    padding: 5px;
+    position: relative;
+    z-index: -1;
+    transform: translateZ(-1px); /**/
+    border-radius: 5px 5px 0px 0px; 
+    text-shadow:2px 2px 2px #333;
+    text-align: center;
+    background-color:rgba(239, 72, 54,.5);
+    cursor: default;
+}
+/* A utilização do translateZ é necessária para o funcionamento após a conversão dos filhos
+    pelo contexto de empilhamento 3d*/
+
+/* Conteúdo da tabela, resultado do sorteio*/
+
+.value{
+    padding:5px;
+    position: relative;
+    z-index: -1;
+    transform: translateZ(-1px);
+    border-radius: 0px 0px 5px 5px; 
+    text-align:center;
+    background-color:rgba(255,255,255,.5);
+    cursor: default;
+}
+
+/* Padrão iPad */
+
+@media (max-width: 768px){
+    .corpo{
+        width: 100px;
+        margin-left:12px;
+        margin-bottom:30px;
+    }    
+
+    #title p{
+        display: block;
+        font-size: 15px;
+        color: #fff;
+    }
+}
+
+/* Padrão smarthpone */
+
+@media (max-width: 375px){
+    .corpo{
+        width: 60px;
+        margin-left:12px;
+        margin-bottom:30px;
+    }
+
+    #title {
+        margin-bottom: 10px;
+        font-size:20px;
+    }
+
+    #title p{
+        margin: 0px;
+        font-size: 12px;
+    }
+}

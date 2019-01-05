@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      Sorteio de Participantes
+    </title>
+    <link rel="shortcut icon" type="image/x-icon" href="img\sorteio.ico">
+    <link rel="stylesheet" type="text/css" href="css\main.css">
+  </head>
+
+  <body>
+    <header id="title">
+        <ul>
+            <h1>
+                <li>              
+                    <a href="index.html">
+                        Gerador de Sorteios
+                    </a>
+                </li>
+                <li>
+                    <p>
+                      Para uma melhor experiência, utilize a versão para desktop.
+                    </p>
+                </li>
+                </h1>              
+            </ul>
+    </header>
+    <form method="get" action="main.php" 
+          id="form" onSubmit="return verificar()">
+          <input type="number" class="number" min="1" 
+          name="p" id="player" autocomplete="off" required
+          placeholder="Quantidade de números no sorteio"/>
+
+          <br>
+
+          <input type="number" class="number" min="1"
+          name="r" id="rows" autocomplete="off" required
+          placeholder="Quantidade de sorteios"/>
+          
+          <br>
+
+          <input type="submit" onclick="verificar()" class="send" value="Enviar" />
+    </form>
+    
+    <script src="js\main.js"></script>
+  </body>
+</html>
